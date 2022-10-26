@@ -1,0 +1,40 @@
+*{
+    background-color:aliceblue;
+    margin: 0;
+    padding: 0;
+}
+#MainNav ul{
+    text-decoration: none;
+    text-justify:auto;
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;;
+    justify-content: center;
+    margin: 10px;
+    padding-left: 35%;
+    padding-top: 3%;
+    border-radius: 10px;
+}
+.Hoverized:hover,.Hoverized:hover p{
+    background-color: aqua;
+}
+#MainNav{
+    flex: 1 100%;
+    display:  grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto;
+    height: 100px;
+    width: 100%;
+    background-color:burlywood;
+}
+body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#Main{
+    flex: 3 0px;
+    height: 600px;
+    width: 700px;
+    background-color: brown;
+}
