@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <py-env>
+        -flask
+        -threading
+    </py-env>
 </head>
 <body>
     <nav id="MainNav"><ul class="Hoverized">
@@ -15,7 +20,19 @@
     </ul></nav>
     <div id="Main">
         <py-script>
-print("Holooo")
+app = Flask('')
+@app.route('/')
+def home():
+    return "I'm alive"
+
+def run():
+    app.run(host = '0.0.0.0', port = 8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+keep_alive()
         </py-script>
     </div>
 </body>
